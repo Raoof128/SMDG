@@ -1,0 +1,39 @@
+[project]
+name = "fhir-generator"
+version = "0.2.0"
+description = "Synthetic HL7 FHIR data generator with CLI and validation"
+authors = [{ name = "Synthetic Medical Data Generator" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "faker>=24.0.0",
+]
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+    "black>=24.0.0",
+]
+
+[project.scripts]
+fhir-gen = "fhir_generator.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["B905"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

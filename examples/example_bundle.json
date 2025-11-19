@@ -1,0 +1,638 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:4098732d-f3fb-4e3e-92cf-82c26b82156f",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "4098732d-f3fb-4e3e-92cf-82c26b82156f",
+        "name": [
+          {
+            "family": "Williams",
+            "given": [
+              "Christopher"
+            ]
+          }
+        ],
+        "qualification": [
+          {
+            "identifier": [
+              {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "value": "6410688"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0360",
+                  "code": "MD",
+                  "display": "Doctor of Medicine"
+                }
+              ],
+              "text": "Doctor of Medicine"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:dd87c831-dfd9-4b09-a302-86859f99f2d0",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "dd87c831-dfd9-4b09-a302-86859f99f2d0",
+        "identifier": [
+          {
+            "use": "official",
+            "system": "http://hospital.smarthealth.org/mrn",
+            "value": "vS02258"
+          }
+        ],
+        "name": [
+          {
+            "family": "Sanchez",
+            "given": [
+              "Aaron"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1965-02-10",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "urn:oid:2.16.840.1.113883.6.238",
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino"
+                }
+              ],
+              "text": "Not Hispanic or Latino"
+            }
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "96105 Garcia Cape Apt. 220"
+            ],
+            "city": "Rhondashire",
+            "state": "NJ",
+            "postalCode": "35277",
+            "country": "USA"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "804.958.7398x9506",
+            "use": "mobile"
+          },
+          {
+            "system": "email",
+            "value": "cbrooks@example.net",
+            "use": "home"
+          }
+        ],
+        "extension_body": {
+          "height_cm": 205.6,
+          "weight_kg": 66.1
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6296acd1-6b9f-44ba-92b3-c22ef70665fc",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "6296acd1-6b9f-44ba-92b3-c22ef70665fc",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "AMB",
+                "display": "ambulatory"
+              }
+            ],
+            "text": "ambulatory"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "Practitioner/4098732d-f3fb-4e3e-92cf-82c26b82156f"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-03-31T22:09:19.889586+00:00",
+          "end": "2024-04-01T03:09:19.889586+00:00"
+        },
+        "location": [
+          {
+            "location": {
+              "display": "Mcintyre Ltd Medical Center"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9fd52edf-3af6-467b-8e70-389d9c21a4a2",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "9fd52edf-3af6-467b-8e70-389d9c21a4a2",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "I10",
+              "display": "Essential (primary) hypertension"
+            }
+          ],
+          "text": "Essential (primary) hypertension"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "recordedDate": "2025-11-19T20:19:11.550486+00:00",
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9a783674-f28c-41c9-a8d5-d3f12e8c7cd5",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "9a783674-f28c-41c9-a8d5-d3f12e8c7cd5",
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "93000",
+              "display": "Electrocardiogram"
+            }
+          ],
+          "text": "Electrocardiogram"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        },
+        "performedPeriod": {
+          "start": "2025-11-19T20:19:11.550527+00:00",
+          "end": "2025-11-19T23:19:11.550527+00:00"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6dba596f-cf23-4e6c-b3d5-75e10d668777",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "6dba596f-cf23-4e6c-b3d5-75e10d668777",
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "617314",
+              "display": "Lisinopril 10 MG"
+            }
+          ],
+          "text": "Lisinopril 10 MG"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "authoredOn": "2025-11-19T20:19:11.550552+00:00",
+        "dosageInstruction": [
+          {
+            "sequence": 1,
+            "text": "Take 1 tablet(s) by mouth daily"
+          }
+        ],
+        "requester": {
+          "reference": "Practitioner/4098732d-f3fb-4e3e-92cf-82c26b82156f"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a19b3c3e-8283-4375-a43c-54f73ceea4e8",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "a19b3c3e-8283-4375-a43c-54f73ceea4e8",
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "58410-2",
+              "display": "Complete blood count"
+            }
+          ],
+          "text": "Complete blood count"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        },
+        "result": [
+          {
+            "reference": "Observation/b876fc84-23e8-4363-894b-6d0dd507661c"
+          },
+          {
+            "reference": "Observation/a9699338-9e14-41b6-949c-4dabdd7004ae"
+          },
+          {
+            "reference": "Observation/16fe84d0-9756-4abb-82d8-a607e94d98df"
+          },
+          {
+            "reference": "Observation/cf5d00ba-d775-4492-8d7c-3cca0ef177c1"
+          },
+          {
+            "reference": "Observation/d21fb6ed-6b2c-4ea5-9e42-4b5b4d2f957b"
+          },
+          {
+            "reference": "Observation/752ac63c-14c0-439e-8756-4cf380f43ed5"
+          }
+        ],
+        "issued": "2025-11-19T20:19:11.550595+00:00"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:257c25f2-f8fc-4ebb-9f03-ca7008d03b9c",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "257c25f2-f8fc-4ebb-9f03-ca7008d03b9c",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ],
+          "text": "Active"
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ],
+          "text": "Confirmed"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "235719002",
+              "display": "Penicillin"
+            }
+          ],
+          "text": "Penicillin"
+        },
+        "patient": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "code": "271807003",
+                    "display": "Rash"
+                  }
+                ],
+                "text": "Rash"
+              }
+            ],
+            "severity": "severe"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b876fc84-23e8-4363-894b-6d0dd507661c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b876fc84-23e8-4363-894b-6d0dd507661c",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "85354-9",
+              "display": "Blood pressure panel"
+            }
+          ],
+          "text": "Blood pressure panel"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        },
+        "effectiveDateTime": "2025-11-19T20:19:11.550306+00:00",
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8480-6",
+                  "display": "Systolic blood pressure"
+                }
+              ],
+              "text": "Systolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 106,
+              "unit": "mmHg"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "8462-4",
+                  "display": "Diastolic blood pressure"
+                }
+              ],
+              "text": "Diastolic blood pressure"
+            },
+            "valueQuantity": {
+              "value": 88,
+              "unit": "mmHg"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a9699338-9e14-41b6-949c-4dabdd7004ae",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a9699338-9e14-41b6-949c-4dabdd7004ae",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ],
+          "text": "Heart rate"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        },
+        "effectiveDateTime": "2025-11-19T20:19:11.550368+00:00",
+        "valueQuantity": {
+          "value": 70,
+          "unit": "beats/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:16fe84d0-9756-4abb-82d8-a607e94d98df",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "16fe84d0-9756-4abb-82d8-a607e94d98df",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body temperature"
+            }
+          ],
+          "text": "Body temperature"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        },
+        "effectiveDateTime": "2025-11-19T20:19:11.550389+00:00",
+        "valueQuantity": {
+          "value": 98.8,
+          "unit": "F"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cf5d00ba-d775-4492-8d7c-3cca0ef177c1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "cf5d00ba-d775-4492-8d7c-3cca0ef177c1",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2339-0",
+              "display": "Glucose [Mass/volume] in Blood"
+            }
+          ],
+          "text": "Glucose [Mass/volume] in Blood"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        },
+        "effectiveDateTime": "2025-11-19T20:19:11.550409+00:00",
+        "valueQuantity": {
+          "value": 121.2,
+          "unit": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d21fb6ed-6b2c-4ea5-9e42-4b5b4d2f957b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d21fb6ed-6b2c-4ea5-9e42-4b5b4d2f957b",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Cholesterol"
+            }
+          ],
+          "text": "Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        },
+        "effectiveDateTime": "2025-11-19T20:19:11.550426+00:00",
+        "valueQuantity": {
+          "value": 223.7,
+          "unit": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:752ac63c-14c0-439e-8756-4cf380f43ed5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "752ac63c-14c0-439e-8756-4cf380f43ed5",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ],
+            "text": "Vital Signs"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+            }
+          ],
+          "text": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        "subject": {
+          "reference": "Patient/dd87c831-dfd9-4b09-a302-86859f99f2d0"
+        },
+        "encounter": {
+          "reference": "Encounter/6296acd1-6b9f-44ba-92b3-c22ef70665fc"
+        },
+        "effectiveDateTime": "2025-11-19T20:19:11.550463+00:00",
+        "valueQuantity": {
+          "value": 96.6,
+          "unit": "%"
+        }
+      }
+    }
+  ]
+}
