@@ -1,0 +1,63 @@
+{
+  "resourceType": "Patient",
+  "id": "dd87c831-dfd9-4b09-a302-86859f99f2d0",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://hospital.smarthealth.org/mrn",
+      "value": "vS02258"
+    }
+  ],
+  "name": [
+    {
+      "family": "Sanchez",
+      "given": [
+        "Aaron"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1965-02-10",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino"
+          }
+        ],
+        "text": "Not Hispanic or Latino"
+      }
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "96105 Garcia Cape Apt. 220"
+      ],
+      "city": "Rhondashire",
+      "state": "NJ",
+      "postalCode": "35277",
+      "country": "USA"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "804.958.7398x9506",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "cbrooks@example.net",
+      "use": "home"
+    }
+  ],
+  "extension_body": {
+    "height_cm": 205.6,
+    "weight_kg": 66.1
+  }
+}
